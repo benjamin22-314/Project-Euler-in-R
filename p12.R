@@ -13,7 +13,9 @@ numberFactors <- function(x) {
 }
 
 ss <- 0
-for(i in seq(100000)){
+i <- 0
+repeat{
+    i <- i+1
     ss <- ss+i
     if(numberFactors(ss)>500){break}
 }
