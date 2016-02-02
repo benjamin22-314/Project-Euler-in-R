@@ -12,7 +12,7 @@ main <- function(){
     x <- Primes(upper)
     
     #length should be at least 21 (from question)
-    x <- revisePrimes(22,x,upper)
+    x <- revisePrimes(21,x,upper)
     
     for(i in seq(length(x))){
         if((length(x)-i)<consecLen){break}
@@ -39,3 +39,14 @@ revisePrimes <- function(a,x,upper){
     }
     x <- rev(z[i:length(z)])
 }
+
+
+#upper <- 1e7
+# [1] "9951191 can be written as the sum of 1587 consecutive primes"
+# user  system elapsed 
+# 5.906   0.365  16.599 
+
+#upper <- 1e8
+# [1] "99819619 can be written as the sum of 4685 consecutive primes"
+# user  system elapsed 
+# 95.179   2.096 113.683 
